@@ -1,6 +1,6 @@
 #! /bin/bash
 # Installs apache and a custom homepage
-# sudo su -
+sudo su -
 sudo apt-get update
 sudo apt-get install -y apache2
 sudo cat <<EOF > /var/www/html/index.html
