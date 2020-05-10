@@ -5,6 +5,7 @@ sudo systemctl start v2ray;
 cat /etc/v2ray/config.json;
 sudo apt install -y jq;
 RETVAL=$(curl https://zv71xbxl6c.execute-api.us-east-1.amazonaws.com/prod/myip | jq '.myip');
+sleep 5;
 JSON_STRING=$( jq -n \
                   --arg r "$RETVAL" \
                   '{ "text": $r }');
