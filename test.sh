@@ -8,4 +8,4 @@ RETVAL=$(curl https://zv71xbxl6c.execute-api.us-east-1.amazonaws.com/prod/myip |
 JSON_STRING=$( jq -n \
                   --arg r "$RETVAL" \
                   '{ "text": $r }');
-curl -X POST https://34qm9tivcf.execute-api.us-west-2.amazonaws.com/dev/todos --data \"$JSON_STRING\";
+curl -X POST https://34qm9tivcf.execute-api.us-west-2.amazonaws.com/dev/todos --data "$JSON_STRING";
