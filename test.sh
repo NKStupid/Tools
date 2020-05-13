@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo apt install -y jq;
+sudo apt install -y jq unzip;
 wget https://install.direct/go.sh;
 sudo bash go.sh;
 sudo systemctl start v2ray;
