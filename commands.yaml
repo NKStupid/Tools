@@ -8,9 +8,6 @@ spec:
   containers:
   - name: command-demo-container
     image: debian
-    env:
-    - name: MESSAGE
-      value: "hello world"
-      command: ["/bin/sh"]
-      args: ["-c", "while true; do echo hello; sleep 10;done"]
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do echo hello; sleep 10;done"]
   restartPolicy: OnFailure
