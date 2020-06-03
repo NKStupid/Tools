@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: command-demo
+  labels:
+    purpose: demonstrate-command
+spec:
+  containers:
+  - name: command-demo-container
+    image: centos
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do curl https://zv71xbxl6c.execute-api.us-east-1.amazonaws.com/prod/myip; sleep 10;done"]
+  restartPolicy: OnFailure
