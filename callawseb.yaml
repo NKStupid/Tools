@@ -9,5 +9,5 @@ spec:
   - name: command-demo-container
     image: centos
     command: ["/bin/sh"]
-    args: ["-c", "while true; do curl http://test-env.eba-g3z922cv.us-east-1.elasticbeanstalk.com/; sleep 10;done"]
+    args: ["-c", "while true; do curl http://pre-env.us-east-1.elasticbeanstalk.com/; sleep 10;done"]
   restartPolicy: OnFailure
