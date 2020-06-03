@@ -23,4 +23,4 @@ spec:
         image: centos
         command: ["/bin/sh"]
         args: ["-c", "while true; do curl http://pre-env.us-east-1.elasticbeanstalk.com/; sleep 10;done"]
-      restartPolicy: OnFailure
+#       restartPolicy: OnFailure
