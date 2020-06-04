@@ -1,6 +1,12 @@
+provider "azurerm" {
+  version = "~> 2.0.0"
+  features {}
+}
+
+
 resource "azurerm_resource_group" "example" {
   name     = "resourceGroup1"
-  location = "West US"
+  location = "Japan East"
 }
 
 resource "azurerm_eventhub_namespace" "example" {
