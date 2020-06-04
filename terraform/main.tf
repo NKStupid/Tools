@@ -130,7 +130,7 @@ resource "azurerm_eventhub" "core_topic4" {
 }
 
 resource "azurerm_eventhub" "core_topic5" {
-  name                = "core_topic4"
+  name                = "core_topic5"
   namespace_name      = azurerm_eventhub_namespace.core_namespace.name
   resource_group_name = azurerm_resource_group.resourceGroup2.name
   partition_count     = 2
