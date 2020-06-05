@@ -1,18 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
-  labels:
-    app: nginx
+  name: command-demo
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: command-demo
   template:
     metadata:
       labels:
-        app: nginx
+        app: command-demo
     spec:
       containers:
       - name: command-demo-container
