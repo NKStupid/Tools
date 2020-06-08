@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java2eh-deployment
+  labels:
+    app: java2eh
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: java2eh
+  template:
+    metadata:
+      labels:
+        app: java2eh
+    spec:
+      containers:
+      - name: java2eh-container
+        image: suizhidaidev/java2eh
+#       restartPolicy: OnFailure
