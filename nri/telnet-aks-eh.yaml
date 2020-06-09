@@ -9,5 +9,5 @@ spec:
   - name: command-demo-container
     image: centos
     command: ["/bin/sh"]
-    args: ["-c", "for i in {1..10}; do ping very-ni-test-aks-eventhub.servicebus.windows.net; sleep 10; done"]
+    args: ["-c", "yum install -y telnet; for i in {1..10}; do telnet very-ni-test-aks-eventhub.servicebus.windows.net 5671; sleep 10; done"]
   restartPolicy: OnFailure
