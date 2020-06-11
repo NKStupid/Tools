@@ -15,7 +15,7 @@ metadata:
  labels:
    app: pulseeventsender
 spec:
- replicas: 1
+ replicas: 10
  selector:
    matchLabels:
      app: pulseeventsender
