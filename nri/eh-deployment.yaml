@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: test-eventhub
+ labels:
+   app: pulseeventsender
+spec:
+ replicas: 10
+ selector:
+   matchLabels:
+     app: pulseeventsender
+ template:
+   metadata:
+     labels:
+       app: pulseeventsender
+   spec:
+     imagePullSecrets:
+       - name: myregistrykey
+     containers:
+       - name: pulseeventsender
+         image: csipochub/pulseeventsender:latest
+         imagePullPolicy: IfNotPresent
+         resources:
+           limits:
+             memory: "128Mi"
+             cpu: "500m"
+
